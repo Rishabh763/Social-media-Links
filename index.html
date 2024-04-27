@@ -11,6 +11,12 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -18,10 +24,10 @@
         theme: {
           extend: {
             colors: {
-              green : "hsl(75, 94%, 57%)",
+              green: "hsl(75, 94%, 57%)",
               white: "hsl(0, 0%, 100%)",
               grey: "hsl(0, 0%, 20%)",
-              darkGrey: "hsl(0, 0%, 12%)",
+              darkGrey: "hsl(0, 0%, 87%)",
               offBlack: "hsl(0, 0%, 8%)",
             },
           },
@@ -31,21 +37,63 @@
 
     <title>Frontend Mentor | Social links profile</title>
   </head>
-  <body>
+  <body
+    style="
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
+    "
+  >
     <main class="bg-black min-h-screen text-white grid place-items-center">
-      <div class="card flex flex-col gap-4 items-center bg-offBlack p-6 rounded-xl mx-4">
-        <img class="rounded-full aspect-ratio max-w-24" src="./assets/images/avatar-jessica.jpeg" alt="profile picture" />
+      <div
+        class="card flex flex-col gap-4 items-center bg-offBlack p-6 rounded-xl mx-4"
+      >
+        <img
+          class="rounded-full aspect-ratio max-w-24"
+          src="./assets/images/avatar-jessica.jpeg"
+          alt="profile picture"
+        />
         <div class="text-center">
-          <h1 class="text-2xl">Jessica Randall</h1>
+          <h1 class="text-2xl font-semibold">Jessica Randall</h1>
           <h2 class="text-green text-sm">London, United Kingdom</h2>
         </div>
-        <p class="text-sm">"Front-end developer and avid reader."</p>
-        <div class="flex flex-col gap-4 items-stretch w-full ">
-          <a href="#"><button class="bg-grey text-white rounded-md w-full py-2 font-bold">GitHub</button></a>
-          <a href="#"><button class="bg-grey text-white rounded-md w-full py-2 font-bold">Frontend Mentor</button></a>
-          <a href="#"><button class="bg-grey text-white rounded-md w-full py-2 font-bold">LinkedIn</button></a>
-          <a href="#"><button class="bg-grey text-white rounded-md w-full py-2 font-bold">Twitter</button></a>
-          <a href="#"><button class="bg-grey text-white rounded-md w-full py-2 font-bold">Instagram</button></a>
+        <p class="text-sm text-darkGrey">"Front-end developer and avid reader."</p>
+        <div class="flex flex-col gap-4 items-stretch w-full">
+          <a href="#"
+            ><button
+              class="bg-grey text-white rounded-md w-full py-2 font-bold text-sm hover:bg-green hover:text-grey transition-colors"
+            >
+              GitHub
+            </button></a
+          >
+          <a href="#"
+            ><button
+              class="bg-grey text-white rounded-md w-full py-2 font-bold text-sm hover:bg-green hover:text-grey transition-colors"
+            >
+              Frontend Mentor
+            </button></a
+          >
+          <a href="#"
+            ><button
+              class="bg-grey text-white rounded-md w-full py-2 font-bold text-sm hover:bg-green hover:text-grey transition-colors"
+            >
+              LinkedIn
+            </button></a
+          >
+          <a href="#"
+            ><button
+              class="bg-grey text-white rounded-md w-full py-2 font-bold text-sm hover:bg-green hover:text-grey transition-colors"
+            >
+              Twitter
+            </button></a
+          >
+          <a href="#"
+            ><button
+              class="bg-grey text-white rounded-md w-full py-2 font-bold text-sm hover:bg-green hover:text-grey transition-colors"
+            >
+              Instagram
+            </button></a
+          >
         </div>
       </div>
     </main>

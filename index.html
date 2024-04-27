@@ -40,6 +40,17 @@
         background-color: hsl(75, 94%, 57%);
         color: hsl(0, 0%, 8%);
       }
+
+      .skeleton-image {
+      background-color: hsl(0, 0%, 8%); /* Placeholder background color */
+      animation: loading 1.5s infinite ease-in-out; /* Animation for skeleton effect */
+    }
+    
+    @keyframes loading {
+      0% { opacity: 0.6; }
+      50% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
     </style>
 
     <title>Frontend Mentor | Social links profile</title>
@@ -55,10 +66,12 @@
       <div
         class="card flex flex-col gap-4 items-center bg-offBlack p-8 rounded-xl mx-4"
       >
+        <div class="rounded-full aspect-square max-w-28 skeleton-image"></div>
         <img
-          class="rounded-full aspect-square max-w-28 object-cover "
+          class="rounded-full aspect-square max-w-28 object-cover hidden"
           src="./assets/images/myimage.jpg"
           alt="profile picture"
+          id="actualImage"
         />
         <div class="text-center">
           <h1 class="text-2xl font-semibold">Rishabh Singh</h1>
@@ -105,4 +118,17 @@
       </div>
     </main>
   </body>
+
+  <script>
+    // JavaScript to load actual image and hide skeleton once image is loaded
+    window.addEventListener('load', function() {
+      var image = document.getElementById('actualImage');
+      image.onload = function() {
+        // Once image is loaded, hide the skeleton and show the actual image
+        image.classList.remove('hidden');
+        document.querySelector('.skeleton-image').style.display = 'none';
+      };
+      image.src = './assets/images/myimage.jpg'; // Set the src attribute to your image URL
+    });
+  </script>
 </html>
